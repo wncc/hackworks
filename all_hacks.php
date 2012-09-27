@@ -40,6 +40,12 @@
 
 		</div>
 
+		<div id="admin_interface">
+
+			<a href="admin_interface.html"> Admin Interface</a>
+
+		</div>
+
 
 	</body>
 </html>

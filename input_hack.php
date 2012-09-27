@@ -28,14 +28,14 @@
 	}
 	
 	//inserting into database's table #MAIN STEP
-	//presently all hacks are approved as soon as the are submitted
+	//presently all hacks are not approved as soon as the are submitted
 	$return_value = mysql_query("INSERT INTO Urls (approved, name, url, imgurl, description) 
-		VALUES (1,'".$_POST["name"]."','".$_POST["url"]."','".$_POST["imgurl"]."','".$_POST["description"]."');");
+		VALUES (0,'".$_POST["name"]."','".$_POST["url"]."','".$_POST["imgurl"]."','".$_POST["description"]."');");
 
 	if(!$return_value)
 		echo "Something went wrong";
 	else
-		echo "Added Successfully!";
+		echo "Added Successfully! \n please wait for the admin to approve";
 
 ?>
 
