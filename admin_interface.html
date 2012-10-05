@@ -5,16 +5,29 @@
 <html>
 	<head>
 		<title> Admin only :P </title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="topbar.css">
 	</head>
 
 	<body>
-
-		<!-- Have to make these fields required-->
+		<div id="top_fake"></div>
+		<div id="topbar">
+			<span id = "title"> Hack Works </span>
+			<input type="button" class="btn btn-large btn-primary" onclick="window.location.href='all_hacks.php'"value="Home">
+			<input type="button" class="btn btn-large btn-success" onclick="window.location.href='submit_a_hack.html'"value="Submit a Hack">
+			<input type="button" class="btn btn-large btn-danger" onclick="window.location.href='admin_interface.html'"value="Admin">
+		</div>
 		<form method="post" action="admin_interface.php">
-			<input type="password" name="password">
-			<input type="submit" value="submit">
+			<div id="update" style="position:fixed; top: 60px; left: 20px; z-index: 2;">
+				<input type="password" name="password">
+				<input type="submit" class="btn " value="Enter">
+			</div>
 		</form>
 
+
+		<div class="warning">
+			Enter if admin only :P
+		</div>
 
 	</body>
 

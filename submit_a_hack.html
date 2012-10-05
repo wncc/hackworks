@@ -5,17 +5,37 @@
 <html>
 	<head>
 		<title> Submit a Hack </title>
+		<link rel="stylesheet" type="text/css" href="topbar.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 	</head>
 
 	<body>
+		<div id="top_fake"></div>
+		<div id="topbar">
+			<span id = "title"> Hack Works </span>
+			<input type="button" class="btn btn-large btn-primary" onclick="window.location.href='all_hacks.php'"value="Home">
+			<input type="button" class="btn btn-large btn-success" onclick="window.location.href='submit_a_hack.html'"value="Submit a Hack">
+			<input type="button" class="btn btn-large btn-danger" onclick="window.location.href='admin_interface.html'"value="Admin">
+		</div>
 
 		<!-- Have to make these fields required-->
-		<form method="post" action="input_hack.php">
-			Name of hack: <input type="text" name="name"> </br>
-			URL of hack's source code: <input type="text" name="url"> </br>
-			Url of image to be displayed: <input type="text" name="imgurl"> </br>
-			Description:<input type="text" name="description"> </br>
-			<input type="submit" value="submit">
+		<h1 class="span7 offset7">
+			Submit a hack!
+		</h1>
+
+
+		<form method="post" class="span7 offset6" action="input_hack.php">
+			<table>
+				<tr><td>Your Name/Team Name: </td><td><input type="text" name="hacker" required="true"></td></tr>
+				<tr><td>Name of hack: </td><td><input type="text" name="name" required="true"></td></tr>
+				<tr><td>URL of hack's source code:  </td><td> <input type="text" name="url" value="http://" required="true"> </td></tr>
+				<tr><td>Url of image to be displayed:   </td><td><input type="text" name="imgurl" value="http://"> </td></tr>
+				<tr><td>Description:</td><td><textarea rows="3" name="description" required="true"></textarea> </td></tr>
+				<tr>
+					<td><input type="button" class="btn" onclick="window.location.href='all_hacks.php'"value="Home"></td>
+					<td><input type="submit" class="btn" value="submit"></td>
+				</tr>
+			</table>
 		</form>
 
 
